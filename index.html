@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+    <style type="text/css">
+      *{
+        margin:0px;
+        padding: 0px;
+        font-family: 'Titillium Web', sans-serif;
+      }
+      .clearfix:after {
+        visibility: hidden;
+        display: block;
+        font-size: 0;
+        content: " ";
+        clear: both;
+        height: 0;
+}
+      .displayFlaex{
+        display: flex;
+        align-items: center;
+        padding: 12px;
+        background: #0dcee5;
+        margin-bottom: 8px;
+        border-radius: 8px;
+      }
+      .centerDiv{
+        width: 100%;  
+        height: auto;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+      .centeInner{
+        width: 400px;
+        background: rgba(0, 170, 182, 0.1);
+        padding: 24px;
+        border-radius: 12px;
+      }
+      #deleteBtn{
+        padding: 10px 15px;
+        border: none;
+        background: #0dcee5;
+        border-radius: 8px;
+        margin-top: 12px;
+        outline: none;
+        font-size: 16px;
+        text-transform: uppercase;
+      }
+      .displayFlaex h3{
+        padding-left: 8px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="centerDiv clearfix">
+      <div class="centeInner">
+        <div class="displayFlaex">
+          <input type="checkbox" name="">
+          <h3>cake</h3>
+        </div>
+        <div class="displayFlaex">
+          <input type="checkbox" name="">
+          <h3>Pizza</h3>
+        </div>
+        <div class="displayFlaex">
+          <input type="checkbox" name="">
+          <h3>Burger</h3>
+        </div>
+        <div class="displayFlaex">
+          <input type="checkbox" name="">
+          <h3>Bread</h3>
+        </div>
+        <div class="displayFlaex">
+          <input type="checkbox" name="">
+          <h3>Cheese</h3>
+        </div>
+      </div>  
+      <button id="deleteBtn">delete checked items</button>
+    </div>
+
+    
+    <script type="text/javascript">
+    
+    const deleteBtn = document.querySelector('#deleteBtn')
+     function deleteItems(){
+      const item = document.querySelectorAll('.displayFlaex');
+      for(i=0;i<item.length;i++){
+        if (item[i].children[0].checked==true) {
+          item[i].style.display = "none"
+        }
+
+      }
+
+
+     }
+     deleteBtn.addEventListener('click',deleteItems)
+
+      
+    </script>
+  </body>
+</html>
+
